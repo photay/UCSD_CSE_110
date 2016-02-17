@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.stanley.alarm" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <user-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".AlarmListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AlarmSettingActivity"></activity>
+        <activity android:name=".SetClockTime"></activity>
+        <activity android:name=".PopupAlarmPuzzleActivity"></activity>
+        <activity android:name=".PopupAlarmMathProblemActivity"></activity>
+        <activity android:name=".WeatherActivity"></activity>
+        <receiver android:name="com.example.stanley.alarm.AlarmReceiver"
+            android:process=".remote">
+        </receiver>
+        <service android:name=".PopupAlarm"></service>
+    </application>
+
+</manifest>

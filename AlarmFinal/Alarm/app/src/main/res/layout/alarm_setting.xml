@@ -1,0 +1,331 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"></LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Start Time"
+                android:id="@+id/start_time_label"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="13dp"
+                android:textSize="30dp" />
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="60dp"
+                android:id="@+id/start_time_button" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="End Time"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/end_time_label"
+                android:textSize="30dp" />
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="60dp"
+                android:id="@+id/end_time_button" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="53dp">
+
+            <ToggleButton
+                android:layout_width="47dp"
+                android:layout_height="40dp"
+                android:background="@drawable/toggle_button_color"
+                android:textOff="Mon"
+                android:id="@+id/toggle_mon"
+                android:textSize="11sp"
+                android:checked="false" />
+
+            <ToggleButton
+                android:background="@drawable/toggle_button_color"
+                android:layout_width="47dp"
+                android:layout_height="40dp"
+                android:textOff="Tue"
+                android:id="@+id/toggle_tue"
+                android:layout_toRightOf="@+id/toggle_mon"
+                android:layout_alignTop="@+id/toggle_mon"
+                android:layout_marginRight="0dp"
+                android:textSize="11sp"
+                android:checked="false" />
+
+            <ToggleButton
+                android:background="@drawable/toggle_button_color"
+                android:layout_width="47dp"
+                android:layout_height="40dp"
+                android:textOff="Wed"
+                android:id="@+id/toggle_wed"
+                android:layout_toRightOf="@+id/toggle_tue"
+                android:layout_alignTop="@+id/toggle_mon"
+                android:layout_marginRight="0dp"
+                android:textSize="11sp"
+                android:checked="false" />
+
+            <ToggleButton
+                android:background="@drawable/toggle_button_color"
+                android:layout_width="47dp"
+                android:layout_height="40dp"
+                android:textOff="Thu"
+                android:id="@+id/toggle_thu"
+                android:layout_toRightOf="@+id/toggle_wed"
+                android:layout_alignTop="@+id/toggle_mon"
+                android:layout_marginRight="0dp"
+                android:textSize="11sp"
+                android:checked="false" />
+
+            <ToggleButton
+                android:background="@drawable/toggle_button_color"
+                android:layout_width="47dp"
+                android:layout_height="40dp"
+                android:textOff="Fri"
+                android:id="@+id/toggle_fri"
+                android:layout_toRightOf="@+id/toggle_thu"
+                android:layout_alignTop="@+id/toggle_mon"
+                android:layout_marginRight="0dp"
+                android:textSize="11sp"
+                android:checked="false" />
+
+            <ToggleButton
+                android:background="@drawable/toggle_button_color"
+                android:layout_width="47dp"
+                android:layout_height="40dp"
+                android:textOff="Sat"
+                android:id="@+id/toggle_sat"
+                android:layout_toRightOf="@+id/toggle_fri"
+                android:layout_alignTop="@+id/toggle_mon"
+                android:layout_marginRight="0dp"
+                android:textSize="11sp"
+                android:checked="false" />
+
+            <ToggleButton
+                android:background="@drawable/toggle_button_color"
+                android:layout_width="47dp"
+                android:layout_height="40dp"
+                android:textOff="Sun"
+                android:id="@+id/toggle_sun"
+                android:layout_toRightOf="@+id/toggle_sat"
+                android:layout_alignTop="@+id/toggle_mon"
+                android:layout_marginRight="0dp"
+                android:textSize="11sp"
+                android:checked="false" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toggle_mon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="0.03">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="Repeat"
+                android:id="@+id/repeat_weekday_radio_button"
+                android:textSize="22dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"></LinearLayout>
+
+        <RelativeLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Ringtone"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/ringtone_label"
+                android:textSize="27dp"
+                android:layout_centerVertical="true" />
+
+            <Spinner
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:id="@+id/ringtone_spinner"
+                android:layout_toRightOf="@+id/ringtone_label"
+                android:layout_weight="0.58" />
+
+            <ImageButton
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_play_arrow"
+                android:id="@+id/ringtone_tester"
+                android:layout_alignBottom="@+id/ringtone_label"
+                android:layout_toRightOf="@+id/ringtone_spinner" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Game Type"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/puzzle_type_label"
+                android:layout_centerVertical="true"
+                android:textSize="27dp" />
+
+            <Spinner
+                android:layout_width="166dp"
+                android:layout_height="45dp"
+                android:id="@+id/game_type_spinner"
+                android:layout_toRightOf="@+id/puzzle_type_label" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></LinearLayout>
+
+        <RelativeLayout
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:layout_width="398dp"
+            android:layout_height="42dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Show Weather"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="38dp"
+                android:id="@+id/show_weather_label"
+                android:layout_centerVertical="true"
+                android:textSize="27dp" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:layout_toRightOf="@+id/show_weather_label"
+                android:id="@+id/weather_switch" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="46dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_centerVertical="true"
+                android:text="Show Calendar"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="31dp"
+                android:id="@+id/show_calender_label"
+                android:textSize="27dp" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:layout_toRightOf="@+id/show_calender_label"
+                android:id="@+id/calendar_switch" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"></LinearLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Confirm"
+                android:id="@+id/alarm_setting_confirm_button" />
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/alarm_setting_cancel_button"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

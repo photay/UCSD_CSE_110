@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="fill_horizontal"
+    android:orientation="horizontal"
+    android:background="#212021">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/white" />
+
+    <ImageButton
+    android:id="@+id/btn_add_clock"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_add_alarm"
+    android:layout_centerInParent="true"
+    android:layout_alignParentLeft="true"
+    android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:id="@+id/btn_delete_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete_alarm"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/btn_confirm_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Delete"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_cancel_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Cancel"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="@drawable/math_nike">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:id="@+id/center"
+        android:text=""
+        />
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="85dp"
+        android:textSize="35dp"
+        android:gravity="bottom"
+        android:layout_below="@+id/center"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/answer"
+        android:layout_alignTop="@+id/first"
+        android:layout_toRightOf="@+id/equal"/>
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:layout_below="@+id/center"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:id="@+id/first"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="100dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:layout_below="@+id/center"
+        android:textSize="35dp"
+        android:id="@+id/sign"
+        android:layout_toRightOf="@+id/first"
+        android:layout_alignTop="@+id/first"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_below="@+id/center"
+        android:textSize="35dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/second"
+        android:layout_toRightOf="@+id/sign"
+        android:layout_alignTop="@+id/first"
+        />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/center"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="="
+        android:id="@+id/equal"
+        android:layout_toRightOf="@+id/second"
+        android:layout_alignTop="@+id/first"
+        />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/confirmation"
+        android:text="Confirm"
+        android:textColor="#ffffff"
+        android:background="@drawable/confirm"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:onClick="confirmClicked"
+        />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/snooze"
+        android:text="Snooze"
+        android:textColor="#ffffff"
+        android:id="@+id/sleep"
+        android:layout_alignTop="@+id/confirmation"
+        android:layout_alignRight="@+id/answer"
+        android:enabled="true" />
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/indication"
+        android:layout_below="@+id/center"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

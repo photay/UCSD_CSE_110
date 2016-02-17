@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Alarm</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_add_clock">Add</string>
+    <string name="action_delete_clock">Delete</string>
+    <string name="temperature">Please wait</string>
+    <string name="condition">Connecting to Internet...</string>
+    <string name="location"></string>
+</resources>
